@@ -12,7 +12,7 @@
               <el-submenu index="1">
                 <template slot="title">
                   <i class="el-icon-location"></i>
-                  <span>导航一</span>
+                  <span>导航</span>
                 </template>
                 <el-menu-item index="/article/create">新建文章</el-menu-item>
                 <el-menu-item index="/article/index">文章列表</el-menu-item>
@@ -24,7 +24,7 @@
         </el-row>
      </el-aside>
      <el-container>
-       <el-main height="">
+       <el-main>
          <!-- Main content -->
          <router-view></router-view>
        </el-main>

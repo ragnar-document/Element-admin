@@ -41,7 +41,16 @@ app.delete("/api/article/:id", async (req, res) => {
         status: true
     })
 })
+// 文章详情
+app.get("/api/article/:id", async (req, res) => {
+    const article = await Article.findById(req.params.id)
+    res.send(article)
+})
 
+app.put("/api/article/:id", async (req, res) => {
+    const article = await Article.findByIdAndUpdate(req.params.id,req.body)
+    res.send(article)
+})
 
 app.listen(3001,()=>{
     console.log('http://localhost:3001/')
